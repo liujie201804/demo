@@ -1,6 +1,6 @@
 package com.example.demo4.moudels.test2;
 
-import com.example.demo.moudels.test1.model.TaskParam;
+import com.example.demo4.moudels.test1.model.TaskParam;
 
 /**
  * @author: jieliu

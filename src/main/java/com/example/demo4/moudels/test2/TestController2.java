@@ -1,7 +1,6 @@
 package com.example.demo4.moudels.test2;
 
-import com.example.demo.moudels.test1.TestService;
-import com.example.demo.moudels.test1.model.TaskParam;
+import com.example.demo4.moudels.test1.model.TaskParam;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
