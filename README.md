@@ -1,2 +1,1 @@
-# 集成redis、rocketmq、log4j
-333
+# 集成redis、rocketmq
