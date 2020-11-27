@@ -33,6 +33,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.junit.vintage</groupId>
+                    <artifactId>junit-vintage-engine</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <!--集成mq-->
@@ -67,11 +73,11 @@
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/it.sauronsoftware/jave -->
-        <dependency>
-            <groupId>it.sauronsoftware</groupId>
-            <artifactId>jave</artifactId>
-            <version>1.0.2</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>it.sauronsoftware</groupId>-->
+<!--            <artifactId>jave</artifactId>-->
+<!--            <version>1.0.2</version>-->
+<!--        </dependency>-->
 
 
     </dependencies>

@@ -19,7 +19,7 @@ import java.util.List;
  */
 @Configuration
 @EnableSwagger2
-@Profile({"dev", "test"})
+//@Profile({"dev", "test"})
 public class SwaggerConfig {
 
     @Bean

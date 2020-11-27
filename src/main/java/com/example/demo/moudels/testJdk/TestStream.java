@@ -36,7 +36,6 @@ public class TestStream {
         List<User> collect3 = users.stream().filter(a -> 0 == a.getId()).filter(a -> 11 == a.getPassWords()).collect(Collectors.toList());
         users.stream().sorted().collect(Collectors.toList());
         users.stream().sorted(Comparator.comparing(User::getUserName)).collect(Collectors.toList());
-
     }
 
 
