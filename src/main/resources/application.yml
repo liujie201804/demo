@@ -1,0 +1,27 @@
+#MQ的配置
+rocketmq:
+  name-server: 10.0.128.138:9876
+  producer:
+    group: GID_OPG_AMS
+#    customized-trace-topic: ams-audit-ready
+
+server:
+  port: 8081
+
+
+swagger:
+  enable: true
+  application-name: ${spring.application.name}
+  application-version: 1.0
+  application-description: springfox swagger 3.0整合Demo
+  try-host: http://localhost:${server.port}/swagger-ui/
+
+
+#swagger
+#springfox:
+#  documentation:
+#    # 关闭ui
+#    swagger-ui:
+#      enabled: true
+#    # 关闭自动启动扫描注解
+#    auto-startup: false

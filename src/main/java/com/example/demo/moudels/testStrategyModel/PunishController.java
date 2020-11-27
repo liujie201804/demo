@@ -1,5 +1,6 @@
 package com.example.demo.moudels.testStrategyModel;
 
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @date 2020/9/7 10:16
  * @return * @return null
  */
+@Api(tags = "策略模式")
 @RestController
 @RequestMapping("/punish")
 public class PunishController {
