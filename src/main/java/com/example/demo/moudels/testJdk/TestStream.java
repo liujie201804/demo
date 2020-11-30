@@ -3,7 +3,6 @@ package com.example.demo.moudels.testJdk;
 import com.example.demo.moudels.testJdk.model.dto.User;
 import com.google.common.collect.Lists;
 
-import javax.jws.soap.SOAPBinding;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -18,7 +17,6 @@ import java.util.stream.Collectors;
  */
 public class TestStream {
 
-
     public static void main(String[] args) {
         ArrayList<User> users = Lists.newArrayList();
 
@@ -30,7 +28,7 @@ public class TestStream {
             users.add(user);
         }
 
-        List<Long> collect = users.stream().map(User::getId).collect(Collectors.toList());
+        List<Long> collect = users.stream().map(User:: getId).collect(Collectors.toList());
         Map<Long, Integer> collect1 = users.stream().collect(Collectors.toMap(User::getId, User::getPassWords));
         Map<Long, User> collect2 = users.stream().collect(Collectors.toMap(User::getId, User -> User));
         List<User> collect3 = users.stream().filter(a -> 0 == a.getId()).filter(a -> 11 == a.getPassWords()).collect(Collectors.toList());
