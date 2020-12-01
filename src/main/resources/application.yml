@@ -1,27 +1,36 @@
-#MQµÄÅäÖÃ
+#MQé…ç½®
 rocketmq:
   name-server: 10.0.128.138:9876
   producer:
     group: GID_OPG_AMS
 #    customized-trace-topic: ams-audit-ready
 
-server:
-  port: 8081
+spring:
+  application:
+    name: demo
 
+logging:
+  file:
+    path: /ams/logs
+
+
+server:
+  port: 8080
 
 swagger:
   enable: true
   application-name: ${spring.application.name}
   application-version: 1.0
-  application-description: springfox swagger 3.0ÕûºÏDemo
+  application-description: springfox swagger 3.0 Demo
   try-host: http://localhost:${server.port}/swagger-ui/
 
 
 #swagger
 #springfox:
 #  documentation:
-#    # ¹Ø±Õui
+#    # ï¿½Ø±ï¿½ui
 #    swagger-ui:
 #      enabled: true
-#    # ¹Ø±Õ×Ô¶¯Æô¶¯É¨Ãè×¢½â
+#    # ï¿½Ø±ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½É¨ï¿½ï¿½×¢ï¿½ï¿½
+
 #    auto-startup: false
