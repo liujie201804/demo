@@ -2,7 +2,7 @@ package com.example.demo.listenter.rocketMq;
 
 import cn.hutool.core.util.IdUtil;
 import com.alibaba.fastjson.JSON;
-import com.example.demo.moudels.testJdk.model.dto.User;
+import com.example.demo.demo.testJdk.model.dto.User;
 import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.rocketmq.client.producer.SendCallback;

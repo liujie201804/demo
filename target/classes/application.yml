@@ -1,0 +1,44 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: demo
+  # DataSource Config
+  datasource:
+    username: root
+    password: 123456
+    # 我是用的 mysql 8版本 向下支持 mysql 5 所以如果是 mysql 5 也可以使用一样的 url \ driver
+    url: jdbc:mysql://localhost:3306/demo4?useSSL=false&useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+# 邮箱的配置
+  mail:
+    default-encoding: utf-8
+    host: smtp.163.com
+    password: HQFZFPBNVJVWZSDJ
+    username: liu109976@163.com
+
+#mybatis plus 设置
+mybatis-plus:
+  mapper-locations: classpath:mapper/**/*Mapper.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  type-aliases-package: com.example.demo.mybatisPlus.model.entity
+
+#MQ配置
+rocketmq:
+  name-server: 10.0.128.138:9876
+  producer:
+    group: GID_OPG_AMS
+#    customized-trace-topic: ams-audit-ready
+
+logging:
+  file:
+    path: /ams/logs
+
+swagger:
+  enable: true
+  application-name: ${spring.application.name}
+  application-version: 1.0
+  application-description: springfox swagger 3.0 Demo
+  try-host: http://localhost:${server.port}/swagger-ui/

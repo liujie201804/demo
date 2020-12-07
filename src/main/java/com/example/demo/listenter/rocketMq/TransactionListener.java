@@ -1,6 +1,6 @@
 package com.example.demo.listenter.rocketMq;
 
-import com.example.demo.moudels.testJdk.model.dto.User;
+import com.example.demo.demo.testJdk.model.dto.User;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.rocketmq.spring.annotation.RocketMQMessageListener;
 import org.apache.rocketmq.spring.core.RocketMQListener;
