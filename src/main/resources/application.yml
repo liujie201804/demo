@@ -1,3 +1,15 @@
+server:
+  port: 8080
+
+spring:
+  mail:
+    default-encoding: utf-8
+    host: smtp.163.com
+    password: HQFZFPBNVJVWZSDJ
+    username: liu109976@163.com
+  application:
+    name: demo
+
 #MQ配置
 rocketmq:
   name-server: 10.0.128.138:9876
@@ -5,17 +17,9 @@ rocketmq:
     group: GID_OPG_AMS
 #    customized-trace-topic: ams-audit-ready
 
-spring:
-  application:
-    name: demo
-
 logging:
   file:
     path: /ams/logs
-
-
-server:
-  port: 8080
 
 swagger:
   enable: true
@@ -23,14 +27,3 @@ swagger:
   application-version: 1.0
   application-description: springfox swagger 3.0 Demo
   try-host: http://localhost:${server.port}/swagger-ui/
-
-
-#swagger
-#springfox:
-#  documentation:
-#    # �ر�ui
-#    swagger-ui:
-#      enabled: true
-#    # �ر��Զ�����ɨ��ע��
-
-#    auto-startup: false

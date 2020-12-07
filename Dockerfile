@@ -14,10 +14,13 @@ RUN  mkdir -p /ams/logs
 ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
 
 #声明一个挂载点，容器内此路径会对应宿主机的某个文件夹
-VOLUME /ams/logs
+#VOLUME /ams/logs
 
-#应用构建成功后的jar文件被复制到镜像内，名字也改成了app.jar
-ADD /jar/demo.jar app.jar
+# 添加变量，如果使用dockerfile-maven-plugin，则会自动替换这里的变量内容
+ARG JAR_FILE=target/demo.jar
+
+# 往容器中添加jar包
+ADD ${JAR_FILE} app.jar
 
 #启动容器时的进程
 ENTRYPOINT ["java","-jar","/app.jar"]
