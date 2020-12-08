@@ -4,6 +4,7 @@ package com.example.demo.mybatisPlus.controller;
 import com.example.demo.common.bean.Response;
 import com.example.demo.mybatisPlus.model.entity.User;
 import com.example.demo.mybatisPlus.service.IUserService;
+import io.swagger.annotations.Api;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,6 +19,7 @@ import javax.annotation.Resource;
  * @author liuJie
  * @since 2020-12-07
  */
+@Api(tags = "用户mybatisPlus")
 @RestController
 @RequestMapping("/mybatisPlus/user")
 public class UserController {

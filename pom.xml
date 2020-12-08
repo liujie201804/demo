@@ -29,6 +29,7 @@
         <commons-lang.version>3.7</commons-lang.version>
         <mybatis-plus-boot-starter.version>3.4.1</mybatis-plus-boot-starter.version>
         <xnio-nio.version>3.8.4.Final</xnio-nio.version>
+        <druid-spring-boot-starter.version>1.2.3</druid-spring-boot-starter.version>
     </properties>
 
     <dependencies>
@@ -49,18 +50,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-undertow</artifactId>
-            <exclusions>
-                <exclusion>
-                    <artifactId>wildfly-common</artifactId>
-                    <groupId>org.wildfly.common</groupId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
-        <dependency>
-            <groupId>org.jboss.xnio</groupId>
-            <artifactId>xnio-nio</artifactId>
-            <version>${xnio-nio.version}</version>
         </dependency>
 
         <dependency>
@@ -143,14 +132,18 @@
             <artifactId>spring-boot-starter-freemarker</artifactId>
         </dependency>
 
-        <!--集成commons-lang3-->
+        <!-- 集成druid -->
         <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-            <version>${commons-lang.version}</version>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>${druid-spring-boot-starter.version}</version>
         </dependency>
 
-
+        <!-- 数据库版本控制 flyway-core -->
+        <dependency>
+            <groupId>org.flywaydb</groupId>
+            <artifactId>flyway-core</artifactId>
+        </dependency>
 
     </dependencies>
 
