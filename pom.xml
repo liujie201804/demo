@@ -30,6 +30,7 @@
         <mybatis-plus-boot-starter.version>3.4.1</mybatis-plus-boot-starter.version>
         <xnio-nio.version>3.8.4.Final</xnio-nio.version>
         <druid-spring-boot-starter.version>1.2.3</druid-spring-boot-starter.version>
+        <xxl-job-core.version>2.2.0</xxl-job-core.version>
     </properties>
 
     <dependencies>
@@ -126,7 +127,7 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- freemarker -->
+        <!--集成freemarker -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-freemarker</artifactId>
@@ -149,6 +150,13 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
+        </dependency>
+
+        <!--集成xxl-job-->
+        <dependency>
+            <groupId>com.xuxueli</groupId>
+            <artifactId>xxl-job-core</artifactId>
+            <version>${xxl-job-core.version}</version>
         </dependency>
 
     </dependencies>

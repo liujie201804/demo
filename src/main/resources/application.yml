@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 8888
 
 spring:
   elasticsearch:
@@ -82,13 +82,27 @@ rocketmq:
     group: GID_OPG_AMS
 #    customized-trace-topic: ams-audit-ready
 
+#日志
 logging:
   file:
     path: /ams/logs
 
+#swagger配置
 swagger:
   enable: true
   application-name: ${spring.application.name}
   application-version: 1.0
   application-description: springfox swagger 3.0 Demo
   try-host: http://localhost:${server.port}/swagger-ui/
+
+#配置xxl-job
+xxl:
+  job:
+    admin:
+      addresses: http://10.61.2.113:1990/xxl-job-admin
+    executor:
+      ip:
+      port: 9998
+      logpath: /data/applogs/xxl-job/jobhandler
+      appname: plat-job
+    accessToken:
