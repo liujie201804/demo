@@ -139,10 +139,16 @@
             <version>${druid-spring-boot-starter.version}</version>
         </dependency>
 
-        <!-- 数据库版本控制 flyway-core -->
+        <!--数据库版本控制flyway-core-->
         <dependency>
             <groupId>org.flywaydb</groupId>
             <artifactId>flyway-core</artifactId>
+        </dependency>
+
+        <!--集成elasticsearch-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
         </dependency>
 
     </dependencies>

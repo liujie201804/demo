@@ -5,7 +5,7 @@ import com.example.demo.common.bean.Response;
 import com.example.demo.mybatisPlus.model.entity.User;
 import com.example.demo.mybatisPlus.service.IUserService;
 import io.swagger.annotations.Api;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -27,10 +27,7 @@ public class UserController {
     @Resource
     private IUserService userService;
 
-    /**
-     * 新增云配置
-     */
-    @PostMapping("/addUser")
+    @GetMapping("/addUser")
     public Response addTransferCloudConfig() {
         User user = new User();
         user.setName("dwfdsf");
@@ -43,6 +40,4 @@ public class UserController {
         }
         return Response.success("新增成功");
     }
-
-
 }
