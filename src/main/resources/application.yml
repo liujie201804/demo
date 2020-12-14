@@ -2,6 +2,9 @@ server:
   port: 8888
 
 spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/test
   elasticsearch:
     rest:
       uris: http://127.0.0.1:9200

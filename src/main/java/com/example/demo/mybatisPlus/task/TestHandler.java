@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 public class TestHandler {
 
     @XxlJob(value = "demoJobHandler")
-    public ReturnT<String> execute() {
+    public ReturnT<String> execute(String name) {
         System.out.println("执行了TestHandler一次");
         return ReturnT.SUCCESS;
     }
