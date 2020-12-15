@@ -2,6 +2,11 @@ server:
   port: 8888
 
 spring:
+  servlet:
+    multipart:
+      location: D:/down
+      file-size-threshold: 5MB
+      max-file-size: 20MB
   data:
     mongodb:
       uri: mongodb://localhost:27017/test

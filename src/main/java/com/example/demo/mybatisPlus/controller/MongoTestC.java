@@ -2,9 +2,7 @@ package com.example.demo.mybatisPlus.controller;
 
 import com.example.demo.common.bean.Response;
 import com.example.demo.mybatisPlus.model.entity.User;
-import com.mongodb.client.MongoClientFactory;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
