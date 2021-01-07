@@ -15,7 +15,7 @@
 //public class TestController {
 //
 //    @Resource
-//    private TestManager testManager;
+//    private com.example.demo.moudels.testThread.BlockingQueue.TestManager testManager;
 //
 //    @GetMapping("/getTe")
 //    public void getTe(Integer num){

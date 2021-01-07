@@ -1,12 +1,14 @@
 package com.example.demo.demo.testJdk;
 
+import cn.hutool.core.convert.Convert;
+import cn.hutool.core.date.DateUtil;
+import cn.hutool.core.io.IoUtil;
+import cn.hutool.system.JvmSpecInfo;
+import cn.hutool.system.SystemUtil;
 import com.example.demo.demo.testJdk.model.dto.User;
 import com.google.common.collect.Lists;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -18,6 +20,13 @@ import java.util.stream.Collectors;
 public class TestStream {
 
     public static void main(String[] args) {
+
+//        IoUtil.copy()
+
+        System.out.println("DateUtil.format(new Date(),\"yyyy-MM-dd\") = " + DateUtil.format(new Date(), "yyyy-MM-dd"));
+        //向上取整
+        System.out.println(Math.round(1.5));
+
         ArrayList<User> users = Lists.newArrayList();
 
         for (int i = 0; i < 5; i++) {
@@ -27,8 +36,8 @@ public class TestStream {
             user.setPassWords(11 + i);
             users.add(user);
         }
-
-        List<Long> collect = users.stream().map(User:: getId).collect(Collectors.toList());
+        List<Long> collect = users.stream().map(User::getId).collect(Collectors.toList());
+        //集合转map
         Map<Long, Integer> collect1 = users.stream().collect(Collectors.toMap(User::getId, User::getPassWords));
         Map<Long, User> collect2 = users.stream().collect(Collectors.toMap(User::getId, User -> User));
         List<User> collect3 = users.stream().filter(a -> 0 == a.getId()).filter(a -> 11 == a.getPassWords()).collect(Collectors.toList());

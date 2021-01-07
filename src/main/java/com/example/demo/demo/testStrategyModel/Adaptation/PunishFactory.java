@@ -1,4 +1,4 @@
-package com.example.demo.demo.testStrategyModel;
+package com.example.demo.demo.testStrategyModel.Adaptation;
 
 import java.util.HashMap;
 

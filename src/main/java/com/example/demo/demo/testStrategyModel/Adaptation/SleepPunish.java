@@ -1,4 +1,4 @@
-package com.example.demo.demo.testStrategyModel;
+package com.example.demo.demo.testStrategyModel.Adaptation;
 
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.stereotype.Service;
@@ -9,17 +9,18 @@ import org.springframework.stereotype.Service;
  * @date 2019/10/17
  * @description：${description}
  */
-@Service("latePunish")
-public class LatePunish extends ParentPunish implements IPunish, InitializingBean {
+@Service("sleepPunish")
+public class SleepPunish extends ParentPunish implements IPunish, InitializingBean {
 
     @Override
     public void exePunish() {
         super.exePunish();
-        System.out.println("迟到罚款100！");
+        System.out.println("睡觉罚款200！");
     }
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        PunishFactory.registerPunish("a", this);
+        PunishFactory.registerPunish("c", this);
     }
+
 }

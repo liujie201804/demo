@@ -1,4 +1,4 @@
-package com.example.demo.demo.testStrategyModel;//package com.example.demo.moudels.test5;
+package com.example.demo.demo.testStrategyModel.Adaptation;//package com.example.demo.moudels.test5;
 //
 //import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.stereotype.Component;
