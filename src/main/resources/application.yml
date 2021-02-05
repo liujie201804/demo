@@ -1,5 +1,5 @@
 server:
-  port: 8888
+  port: 8000
 
 spring:
   servlet:
@@ -7,9 +7,9 @@ spring:
       location: D:/down
       file-size-threshold: 5MB
       max-file-size: 20MB
-  data:
-    mongodb:
-      uri: mongodb://localhost:27017/test
+#  data:
+#    mongodb:
+#      uri: mongodb://localhost:27017/test
   elasticsearch:
     rest:
       uris: http://127.0.0.1:9200
@@ -64,11 +64,11 @@ spring:
 #          config:
 #            comment-allow: true
 #            none-base-statement-allow: true
-  flyway:
-    enabled: true
-    validate-on-migrate: true
-    baseline-version: 0
-    baseline-on-migrate: true
+#  flyway:
+#    enabled: true
+#    validate-on-migrate: true
+#    baseline-version: 0
+#    baseline-on-migrate: true
   # 邮箱的配置
   mail:
     default-encoding: utf-8
@@ -104,13 +104,13 @@ swagger:
   try-host: http://localhost:${server.port}/swagger-ui/
 
 #配置xxl-job
-xxl:
-  job:
-    admin:
-      addresses: http://10.61.2.113:1990/xxl-job-admin
-    executor:
-      ip:
-      port: 9998
-      logpath: /data/applogs/xxl-job/jobhandler
-      appname: plat-job
-    accessToken:
+#xxl:
+#  job:
+#    admin:
+#      addresses: http://10.61.2.113:1990/xxl-job-admin
+#    executor:
+#      ip:
+#      port: 9998
+#      logpath: /data/applogs/xxl-job/jobhandler
+#      appname: plat-job
+#    accessToken:
