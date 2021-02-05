@@ -27,6 +27,7 @@ public class EmailController {
 
     @GetMapping("/to33")
     public void sendHtmlMail() {
+        System.out.println("eeeeeeeeeeeeeeeeeee");
         Map<String, Object> model = new HashMap<String, Object>();
         model.put("time", System.currentTimeMillis());
         model.put("message", "huhy   测试邮件");
