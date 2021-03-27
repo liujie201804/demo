@@ -1,11 +1,7 @@
 package com.example.demo.demo.testJdk;
 
-import cn.hutool.core.convert.Convert;
 import cn.hutool.core.date.DateUtil;
-import cn.hutool.core.io.IoUtil;
-import cn.hutool.system.JvmSpecInfo;
-import cn.hutool.system.SystemUtil;
-import com.example.demo.demo.testJdk.model.dto.User;
+import com.example.demo.demo.testJdk.model.dto.UserDo;
 import com.google.common.collect.Lists;
 
 import java.util.*;
@@ -27,22 +23,22 @@ public class TestStream {
         //向上取整
         System.out.println(Math.round(1.5));
 
-        ArrayList<User> users = Lists.newArrayList();
+        ArrayList<UserDo> users = Lists.newArrayList();
 
         for (int i = 0; i < 5; i++) {
-            User user = new User();
+            UserDo user = new UserDo();
             user.setId(Long.valueOf(i));
             user.setUserName("dsdf" + i);
             user.setPassWords(11 + i);
             users.add(user);
         }
-        List<Long> collect = users.stream().map(User::getId).collect(Collectors.toList());
+        List<Long> collect = users.stream().map(UserDo::getId).collect(Collectors.toList());
         //集合转map
-        Map<Long, Integer> collect1 = users.stream().collect(Collectors.toMap(User::getId, User::getPassWords));
-        Map<Long, User> collect2 = users.stream().collect(Collectors.toMap(User::getId, User -> User));
-        List<User> collect3 = users.stream().filter(a -> 0 == a.getId()).filter(a -> 11 == a.getPassWords()).collect(Collectors.toList());
+        Map<Long, Integer> collect1 = users.stream().collect(Collectors.toMap(UserDo::getId, UserDo::getPassWords));
+        Map<Long, UserDo> collect2 = users.stream().collect(Collectors.toMap(UserDo::getId, User -> User));
+        List<UserDo> collect3 = users.stream().filter(a -> 0 == a.getId()).filter(a -> 11 == a.getPassWords()).collect(Collectors.toList());
         users.stream().sorted().collect(Collectors.toList());
-        users.stream().sorted(Comparator.comparing(User::getUserName)).collect(Collectors.toList());
+        users.stream().sorted(Comparator.comparing(UserDo::getUserName)).collect(Collectors.toList());
     }
 
 

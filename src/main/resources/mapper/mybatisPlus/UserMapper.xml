@@ -5,14 +5,18 @@
     <!-- 通用查询映射结果 -->
     <resultMap id="BaseResultMap" type="com.example.demo.mybatisPlus.model.entity.User">
         <id column="id" property="id" />
-        <result column="name" property="name" />
-        <result column="age" property="age" />
-        <result column="email" property="email" />
+        <result column="title" property="title" />
+        <result column="author" property="author" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+        <result column="version" property="version" />
+        <result column="status" property="status" />
+        <result column="delete_status" property="deleteStatus" />
     </resultMap>
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        id, name, age, email
+        id, title, author, create_time, update_time, version, status, delete_status
     </sql>
 
 </mapper>

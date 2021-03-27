@@ -1,15 +1,15 @@
 package com.example.demo.mybatisPlus.controller;
 
 
-import com.example.demo.common.bean.Response;
 import com.example.demo.mybatisPlus.model.entity.User;
 import com.example.demo.mybatisPlus.service.IUserService;
-import io.swagger.annotations.Api;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * <p>
@@ -17,27 +17,19 @@ import javax.annotation.Resource;
  * </p>
  *
  * @author liuJie
- * @since 2020-12-07
+ * @since 2021-03-27
  */
-@Api(tags = "用户mybatisPlus")
 @RestController
 @RequestMapping("/mybatisPlus/user")
 public class UserController {
 
-    @Resource
+    @Autowired
     private IUserService userService;
 
-    @GetMapping("/addUser")
-    public Response addTransferCloudConfig() {
-        User user = new User();
-        user.setName("dwfdsf");
-        user.setAge(43);
-        user.setEmail("66666666666");
-
-        boolean save = userService.save(user);
-        if (!save) {
-            return Response.success("新增失败");
-        }
-        return Response.success("新增成功");
+    @GetMapping("getUser")
+   public Object getUser(){
+        List<User> list = userService.list();
+        return list;
     }
+
 }

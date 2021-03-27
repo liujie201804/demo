@@ -1,5 +1,12 @@
 package com.example.demo.mybatisPlus.model.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import java.util.Date;
+import com.baomidou.mybatisplus.annotation.Version;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.FieldFill;
+import com.baomidou.mybatisplus.annotation.TableLogic;
+import com.baomidou.mybatisplus.annotation.TableField;
 import java.io.Serializable;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -10,7 +17,7 @@ import lombok.EqualsAndHashCode;
  * </p>
  *
  * @author liuJie
- * @since 2020-12-07
+ * @since 2021-03-27
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -19,24 +26,49 @@ public class User implements Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 主键ID
+     * 唯一标识id
      */
+    @TableId(value = "id", type = IdType.AUTO)
     private Long id;
 
     /**
-     * 姓名
+     * 标题
      */
-    private String name;
+    private String title;
 
     /**
-     * 年龄
+     * 作者
      */
-    private Integer age;
+    private String author;
 
     /**
-     * 邮箱
+     * 创建时间
      */
-    private String email;
+    @TableField(fill = FieldFill.INSERT)
+    private Date createTime;
+
+    /**
+     * 更新时间
+     */
+    @TableField(fill = FieldFill.UPDATE)
+    private Date updateTime;
+
+    /**
+     * 版本号
+     */
+    @Version
+    private Long version;
+
+    /**
+     * 状态
+     */
+    private Integer status;
+
+    /**
+     * 逻辑删除备注：0 正常 ，1 删除
+     */
+    @TableLogic
+    private Integer deleteStatus;
 
 
 }
