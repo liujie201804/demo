@@ -1,7 +1,5 @@
 package com.example.demo.common.consts;
 
-import com.google.common.collect.Maps;
-
 import java.util.HashMap;
 
 /**
@@ -50,7 +48,7 @@ public class Const {
     /**
      * 进度map
      */
-    public static final HashMap<Long, Integer> PROCESS_MAP = Maps.newHashMap();
+    public static final HashMap<Long, Integer> PROCESS_MAP = new HashMap<>();
 
 
     /**

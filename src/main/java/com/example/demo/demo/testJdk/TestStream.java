@@ -2,7 +2,6 @@ package com.example.demo.demo.testJdk;
 
 import cn.hutool.core.date.DateUtil;
 import com.example.demo.demo.testJdk.model.dto.UserDo;
-import com.google.common.collect.Lists;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -23,7 +22,7 @@ public class TestStream {
         //向上取整
         System.out.println(Math.round(1.5));
 
-        ArrayList<UserDo> users = Lists.newArrayList();
+        ArrayList<UserDo> users = new ArrayList<>();
 
         for (int i = 0; i < 5; i++) {
             UserDo user = new UserDo();
